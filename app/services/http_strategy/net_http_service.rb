@@ -29,15 +29,21 @@ module HttpStrategy
     end
 
     private
-      def make_request(klass, path, query: {}, headers: {}, body: {})
+      def build_uri(path, query)
         uri = URI("#{@base_uri}#{path}")
         uri.query = Rack::Utils.build_query(query) if query
+
+        uri
+      end
+
+      def make_request(request_type, path, query: {}, headers: {}, body: {})
+        uri = build_uri(path, query)
 
         http = Net::HTTP.new(uri.host, uri.port)
         http.use_ssl = uri.instance_of?(URI::HTTPS)
 
         headers = @default_headers.merge(headers)
-        request = klass.new(uri.request_uri, headers)
+        request = request_type.new(uri.request_uri, headers)
         if body.present?
           request.body = body.to_json
           request["Content-Type"] = "application/json"
