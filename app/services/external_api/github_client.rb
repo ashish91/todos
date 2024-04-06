@@ -3,7 +3,7 @@ module ExternalApi
 
     BASE_URI = "https://api.github.com".freeze
 
-    def initialize(token: Rails.application.credentials.github.token)
+    def initialize(token: "dummy")
       super(base_uri: BASE_URI, default_headers: default_headers(token))
     end
 
