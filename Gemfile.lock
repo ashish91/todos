@@ -208,8 +208,6 @@ GEM
     regexp_parser (2.9.0)
     reline (0.5.0)
       io-console (~> 0.5)
-    repo-small-badge (0.2.10)
-      victor (~> 0.3.0)
     rexml (3.2.6)
     rspec-core (3.13.0)
       rspec-support (~> 3.13.0)
@@ -239,9 +237,6 @@ GEM
       simplecov-html (~> 0.11)
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
-    simplecov-small-badge (0.2.7)
-      repo-small-badge (~> 0.2.10)
-      simplecov (~> 0.18)
     simplecov_json_formatter (0.1.4)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
@@ -262,7 +257,6 @@ GEM
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    victor (0.3.4)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -298,7 +292,6 @@ DEPENDENCIES
   rspec-rails (~> 6.1)
   selenium-webdriver
   simplecov
-  simplecov-small-badge
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails

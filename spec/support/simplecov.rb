@@ -1,5 +1,4 @@
 require 'simplecov'
-require 'simplecov_small_badge'
 
 SimpleCov.start 'rails'do
   # Configuration options go here
