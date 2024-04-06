@@ -72,5 +72,4 @@ group :test do
   gem "faker", "~> 3.3"
 
   gem 'simplecov', require: false
-  gem 'simplecov-small-badge', require: false
 end
