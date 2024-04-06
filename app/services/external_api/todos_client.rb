@@ -11,8 +11,8 @@ module ExternalApi
       super(base_uri: BASE_URI, default_headers: default_headers(token))
     end
 
-    def todos(**kwargs)
-      @http_api.get("/todos", query: kwargs)
+    def todos
+      @http_api.get("/todos", query: {})
     end
 
     def todo(id)

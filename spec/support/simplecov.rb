@@ -8,6 +8,7 @@ SimpleCov.start 'rails'do
     app/jobs/application_job.rb
     app/mailers/application_mailer.rb
     app/helpers/application_helper.rb
+    app/helpers/todos_helper.rb
     lib/rails
     lib/templates
     bin
