@@ -66,6 +66,8 @@ group :test do
   gem "selenium-webdriver"
 
   gem "rspec-rails", "~> 6.1"
-end
+  gem "webmock", "~> 3.23"
 
-gem "webmock", "~> 3.23"
+  gem "factory_bot_rails", "~> 6.4"
+  gem "faker", "~> 3.3"
+end

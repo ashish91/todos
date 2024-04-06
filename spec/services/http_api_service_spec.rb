@@ -5,7 +5,7 @@ RSpec.describe HttpApiService, type: :service do
   let (:base_uri) { "http://test.com" }
   subject { HttpApiService.new(base_uri: base_uri) }
 
-  context "" do
+  describe "" do
     it "sets default headers" do
       stub_request(:get, "#{base_uri}/todos").
         to_return(
@@ -18,7 +18,7 @@ RSpec.describe HttpApiService, type: :service do
     end
   end
 
-  context "#get requests" do
+  describe "#get requests" do
     it "without query params" do
       stub_request(:get, "#{base_uri}/todos").
         to_return(
@@ -44,7 +44,7 @@ RSpec.describe HttpApiService, type: :service do
     end
   end
 
-  context "#post requests" do
+  describe "#post requests" do
 
     it "with body" do
       body = {"foo" => {"bar" => "baz"}}
@@ -61,7 +61,7 @@ RSpec.describe HttpApiService, type: :service do
 
   end
 
-  context "#patch requests" do
+  describe "#patch requests" do
 
     it "with body" do
       body = {"foo" => {"bar" => "baz"}}
@@ -78,7 +78,7 @@ RSpec.describe HttpApiService, type: :service do
 
   end
 
-  context "#delete requests" do
+  describe "#delete requests" do
 
     it "with body" do
       stub_request(:delete, "#{base_uri}/todos/1").
@@ -93,7 +93,7 @@ RSpec.describe HttpApiService, type: :service do
 
   end
 
-  context "#error 500" do
+  describe "#error 500" do
 
     it "with body" do
       stub_request(:get, "#{base_uri}/todos").
